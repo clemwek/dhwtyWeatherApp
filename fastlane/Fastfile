@@ -18,7 +18,7 @@ default_platform(:ios)
 platform :ios do
   desc "Push a new beta build to TestFlight"
   lane :beta do
-  increament_build_number(xcodeproj: "WeatherApp.xcodeproj")
+    increment_build_number(xcodeproj: "WeatherApp.xcodeproj")
     build_app(scheme: "WeatherApp")
     upload_to_testflight
   end
