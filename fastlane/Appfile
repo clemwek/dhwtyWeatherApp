@@ -1,0 +1,8 @@
+app_identifier("dhwty.WeatherApp") # The bundle identifier of your app
+apple_id("clemwek@gmail.com") # Your Apple email address
+
+itc_team_id("121442687") # App Store Connect Team ID
+team_id("Z2TAY6TRFW") # Developer Portal Team ID
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile
