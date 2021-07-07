@@ -16,6 +16,7 @@
 		B34B1108269339D40014A333 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B34B1106269339D40014A333 /* LaunchScreen.storyboard */; };
 		B34B1113269339D40014A333 /* WeatherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34B1112269339D40014A333 /* WeatherAppTests.swift */; };
 		B34B111E269339D40014A333 /* WeatherAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34B111D269339D40014A333 /* WeatherAppUITests.swift */; };
+		B3858CC82695CEC900DDE390 /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3858CC72695CEC900DDE390 /* WeatherTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		B34B1119269339D40014A333 /* WeatherAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B34B111D269339D40014A333 /* WeatherAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppUITests.swift; sourceTree = "<group>"; };
 		B34B111F269339D40014A333 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3858CC72695CEC900DDE390 /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				B34B1106269339D40014A333 /* LaunchScreen.storyboard */,
 				B34B1109269339D40014A333 /* Info.plist */,
 				B34B1101269339D10014A333 /* WeatherApp.xcdatamodeld */,
+				B3858CC72695CEC900DDE390 /* WeatherTableViewCell.swift */,
 			);
 			path = WeatherApp;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3858CC82695CEC900DDE390 /* WeatherTableViewCell.swift in Sources */,
 				B34B1103269339D10014A333 /* WeatherApp.xcdatamodeld in Sources */,
 				B34B10FD269339D10014A333 /* ViewController.swift in Sources */,
 				B34B10F9269339D10014A333 /* AppDelegate.swift in Sources */,
