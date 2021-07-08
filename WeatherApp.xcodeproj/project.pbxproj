@@ -17,6 +17,8 @@
 		B34B1113269339D40014A333 /* WeatherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34B1112269339D40014A333 /* WeatherAppTests.swift */; };
 		B34B111E269339D40014A333 /* WeatherAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34B111D269339D40014A333 /* WeatherAppUITests.swift */; };
 		B3858CC82695CEC900DDE390 /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3858CC72695CEC900DDE390 /* WeatherTableViewCell.swift */; };
+		B3858CCA269628D300DDE390 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3858CC9269628D300DDE390 /* NetworkManager.swift */; };
+		B39FF4AF2696E0980090C06B /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39FF4AE2696E0980090C06B /* WeatherModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		B34B111D269339D40014A333 /* WeatherAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppUITests.swift; sourceTree = "<group>"; };
 		B34B111F269339D40014A333 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3858CC72695CEC900DDE390 /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
+		B3858CC9269628D300DDE390 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B39FF4AE2696E0980090C06B /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,8 @@
 				B34B1109269339D40014A333 /* Info.plist */,
 				B34B1101269339D10014A333 /* WeatherApp.xcdatamodeld */,
 				B3858CC72695CEC900DDE390 /* WeatherTableViewCell.swift */,
+				B3858CC9269628D300DDE390 /* NetworkManager.swift */,
+				B39FF4AE2696E0980090C06B /* WeatherModel.swift */,
 			);
 			path = WeatherApp;
 			sourceTree = "<group>";
@@ -267,8 +273,10 @@
 				B3858CC82695CEC900DDE390 /* WeatherTableViewCell.swift in Sources */,
 				B34B1103269339D10014A333 /* WeatherApp.xcdatamodeld in Sources */,
 				B34B10FD269339D10014A333 /* ViewController.swift in Sources */,
+				B3858CCA269628D300DDE390 /* NetworkManager.swift in Sources */,
 				B34B10F9269339D10014A333 /* AppDelegate.swift in Sources */,
 				B34B10FB269339D10014A333 /* SceneDelegate.swift in Sources */,
+				B39FF4AF2696E0980090C06B /* WeatherModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

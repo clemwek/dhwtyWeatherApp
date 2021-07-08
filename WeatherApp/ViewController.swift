@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         weatherTable.dataSource = self
         weatherTable.delegate = self
+        let _ = NetworkManager.shared.fetchFiveDayWeather()
     }
 }
 
