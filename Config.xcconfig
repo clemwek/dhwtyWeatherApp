@@ -1,0 +1,11 @@
+//
+//  Config.xcconfig
+//  WeatherApp
+//
+//  Created by DHwty on 09/07/2021.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+API_KEY=c611c520417312134410fbe9eee3ea3e
