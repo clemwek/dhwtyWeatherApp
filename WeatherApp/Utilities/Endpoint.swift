@@ -50,8 +50,7 @@ extension Endpoint {
                 URLQueryItem(name: "lat", value: "\(latitude)"),
                 URLQueryItem(name: "lon", value: "\(longitude)"),
                 URLQueryItem(name: "appid", value: apiKey),
-                URLQueryItem(name: "units", value: "metric"),
-                URLQueryItem(name: "cnt", value: "2")
+                URLQueryItem(name: "units", value: "metric")
             ])
     }
 }

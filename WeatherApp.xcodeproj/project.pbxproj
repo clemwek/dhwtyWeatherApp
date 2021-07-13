@@ -25,6 +25,8 @@
 		B3D784BD269C2F180031EE4A /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D784BC269C2F180031EE4A /* LocationManager.swift */; };
 		B3D784BF269C2FC20031EE4A /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D784BE269C2FC20031EE4A /* Location.swift */; };
 		B3D784C1269C34550031EE4A /* OpenWeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D784C0269C34550031EE4A /* OpenWeatherService.swift */; };
+		B3D784C4269D6EE20031EE4A /* WeatherTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D784C3269D6EE20031EE4A /* WeatherTableViewCellViewModel.swift */; };
+		B3D784C6269DA6F00031EE4A /* extentio+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D784C5269DA6F00031EE4A /* extentio+Date.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		B3D784BC269C2F180031EE4A /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		B3D784BE269C2FC20031EE4A /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		B3D784C0269C34550031EE4A /* OpenWeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherService.swift; sourceTree = "<group>"; };
+		B3D784C3269D6EE20031EE4A /* WeatherTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		B3D784C5269DA6F00031EE4A /* extentio+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extentio+Date.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				B3D784BA269C2C880031EE4A /* WeatherViewModel.swift */,
+				B3D784C3269D6EE20031EE4A /* WeatherTableViewCellViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -204,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				B38C5CEE2697651A00F9F5F2 /* extension+URLSession.swift */,
+				B3D784C5269DA6F00031EE4A /* extentio+Date.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -347,6 +353,8 @@
 				B3D784BF269C2FC20031EE4A /* Location.swift in Sources */,
 				B34B10F9269339D10014A333 /* AppDelegate.swift in Sources */,
 				B34B10FB269339D10014A333 /* SceneDelegate.swift in Sources */,
+				B3D784C4269D6EE20031EE4A /* WeatherTableViewCellViewModel.swift in Sources */,
+				B3D784C6269DA6F00031EE4A /* extentio+Date.swift in Sources */,
 				B3D784BD269C2F180031EE4A /* LocationManager.swift in Sources */,
 				B39FF4AF2696E0980090C06B /* WeatherModel.swift in Sources */,
 				B38C5CEF2697651A00F9F5F2 /* extension+URLSession.swift in Sources */,
