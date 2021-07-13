@@ -10,7 +10,7 @@ import Foundation
 struct WeatherModel: Decodable {
     let dt: Int
     let coord: Coord?
-//    var weather: [Weather]
+    var weather: [Weather]
     let main: Main
     let visibility: Int
     let wind: Wind
@@ -34,11 +34,11 @@ struct Coord: Decodable {
 }
 
 struct Weather: Decodable {
-//    let id: Int
-    let name: String
-//    let main: String
-//    let description: String
-//    let icon: String
+    let id: Int
+//    let name: String
+    let main: String
+    let description: String
+    let icon: String
 }
 
 struct Main: Decodable {

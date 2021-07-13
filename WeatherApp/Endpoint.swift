@@ -30,23 +30,27 @@ extension Endpoint {
 }
 
 extension Endpoint {
-    static func fetchCurrentWeather(city: String) -> Self {
+    static func fetchCurrentWeather(latitude: Double, longitude: Double) -> Self {
         let apiKey = "c611c520417312134410fbe9eee3ea3e"
         return Endpoint(
             path: "weather",
             queryItems: [
-                URLQueryItem(name: "q", value: city),
-                URLQueryItem(name: "appid", value: apiKey)
+                URLQueryItem(name: "lat", value: "\(latitude)"),
+                URLQueryItem(name: "lon", value: "\(longitude)"),
+                URLQueryItem(name: "appid", value: apiKey),
+                URLQueryItem(name: "units", value: "metric")
             ])
     }
 
-    static func fetchFiveDayWeather(city: String) -> Self {
+    static func fetchFiveDayWeather(latitude: Double, longitude: Double) -> Self {
         let apiKey = "c611c520417312134410fbe9eee3ea3e"
         return Endpoint(
             path: "forecast",
             queryItems: [
-                URLQueryItem(name: "q", value: city),
+                URLQueryItem(name: "lat", value: "\(latitude)"),
+                URLQueryItem(name: "lon", value: "\(longitude)"),
                 URLQueryItem(name: "appid", value: apiKey),
+                URLQueryItem(name: "units", value: "metric"),
                 URLQueryItem(name: "cnt", value: "2")
             ])
     }
