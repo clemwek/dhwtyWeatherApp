@@ -20,6 +20,12 @@ class WeatherViewController: UIViewController {
     @IBOutlet weak var daysWeather: UILabel!
     @IBOutlet weak var cityLable: UILabel!
     
+    @IBAction func showLocations(_ sender: Any) {
+    }
+    @IBAction func searchLocations(_ sender: Any) {
+        showAlert()
+    }
+    
     private let viewModel = WeatherViewModel()
     
     var locationManager = CLLocationManager()
@@ -61,25 +67,39 @@ class WeatherViewController: UIViewController {
             DispatchQueue.main.async {
                 self?.tableBack.backgroundColor = bgColor
                 self?.weatherTable.backgroundColor = bgColor
+                self?.weatherTable.reloadData()
             }
         }
         
         locationManager.requestWhenInUseAuthorization()
         var currentLoc: CLLocation!
-        
-//        switch locationManager.authorizationStatus {
-//        case .restricted, .denied:
-//            print("requires permmision")
-//        default:
-//            currentLoc = locationManager.location
-//            viewModel.changeLocation(to: currentLoc)
-//        }
-        
+ 
         if(CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
             CLLocationManager.authorizationStatus() == .authorizedAlways) {
             currentLoc = locationManager.location
             viewModel.changeLocation(to: currentLoc)
         }
+    }
+    
+    func showAlert() {
+        let alert = UIAlertController(title: "Get Weather",
+                                      message: "Geat weather for a new city",
+                                      preferredStyle: .alert)
+        alert.addTextField { cityField in
+            cityField.placeholder = "Enter city name"
+        }
+        alert.addAction(UIAlertAction(title: "search", style: .default, handler: { [weak alert] _ in
+            if let textField = alert?.textFields![0],
+               let city = textField.text,
+               city != "" {
+                self.viewModel.changeLocation(to: city)
+            }
+        }))
+        alert.addAction(UIAlertAction(title: "Dismiss",
+                                      style: .cancel, handler: { _ in
+                                        print("Tapped Dismiss")
+                                      }))
+        present(alert, animated: true, completion: nil)
     }
 }
 
@@ -92,8 +112,9 @@ extension WeatherViewController: UITableViewDataSource {
         let cell = weatherTable.dequeueReusableCell(withIdentifier: "cell") as! WeatherTableViewCell
         
         let dayWeather = weekWeatherData[indexPath.row]
+        cell.backgroundColor = dayWeather.bgColor
         cell.dayLable.text = dayWeather.weekday
-        cell.weatherIcon.image = UIImage(named: "clear")
+        cell.weatherIcon.image = dayWeather.icon
         cell.daysTemp.text = dayWeather.dayTemp
         return cell
     }
@@ -102,4 +123,3 @@ extension WeatherViewController: UITableViewDataSource {
 extension WeatherViewController: UITableViewDelegate {
     
 }
-

@@ -29,6 +29,7 @@
 		B3D784C6269DA6F00031EE4A /* extentio+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D784C5269DA6F00031EE4A /* extentio+Date.swift */; };
 		B3D784C8269EC0C10031EE4A /* extension+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D784C7269EC0C10031EE4A /* extension+UIColor.swift */; };
 		B3D784CA269ECCF60031EE4A /* extention+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D784C9269ECCF60031EE4A /* extention+UIImage.swift */; };
+		B3D784CC269EDC970031EE4A /* ListPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D784CB269EDC970031EE4A /* ListPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		B3D784C5269DA6F00031EE4A /* extentio+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extentio+Date.swift"; sourceTree = "<group>"; };
 		B3D784C7269EC0C10031EE4A /* extension+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extension+UIColor.swift"; sourceTree = "<group>"; };
 		B3D784C9269ECCF60031EE4A /* extention+UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extention+UIImage.swift"; sourceTree = "<group>"; };
+		B3D784CB269EDC970031EE4A /* ListPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 			children = (
 				B34B10FC269339D10014A333 /* WeatherViewController.swift */,
 				B3858CC72695CEC900DDE390 /* WeatherTableViewCell.swift */,
+				B3D784CB269EDC970031EE4A /* ListPageViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 				B3D784C6269DA6F00031EE4A /* extentio+Date.swift in Sources */,
 				B3D784BD269C2F180031EE4A /* LocationManager.swift in Sources */,
 				B39FF4AF2696E0980090C06B /* WeatherModel.swift in Sources */,
+				B3D784CC269EDC970031EE4A /* ListPageViewController.swift in Sources */,
 				B38C5CEF2697651A00F9F5F2 /* extension+URLSession.swift in Sources */,
 				B3D784B9269C2AD30031EE4A /* Box.swift in Sources */,
 			);

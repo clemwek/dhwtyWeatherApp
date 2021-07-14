@@ -18,4 +18,14 @@ extension UIImage {
     static var cloudy: UIImage? {
         UIImage(named: "forest_cloudy")
     }
+    
+    static var clearIcon: UIImage? {
+        UIImage(named: "clear")
+    }
+    static var rainIcon: UIImage? {
+        UIImage(named: "rain")
+    }
+    static var cloudIcon: UIImage? {
+        UIImage(named: "partlysunny")
+    }
 }

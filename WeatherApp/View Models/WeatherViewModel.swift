@@ -10,19 +10,6 @@ import CoreLocation
 
 public class WeatherViewModel {
     private let geocoder = LocationManager()
-//    private let defaultAddress = "Chicago"
-
-    private let dateFormatter: DateFormatter = {
-      let dateFormatter = DateFormatter()
-      dateFormatter.dateFormat = "EEEE, MMM d"
-      return dateFormatter
-    }()
-
-    private let tempFormatter: NumberFormatter = {
-      let tempFormatter = NumberFormatter()
-      tempFormatter.numberStyle = .none
-      return tempFormatter
-    }()
     
     let locationName = Box("Loading...")
     let currentTemperature = Box("...")
@@ -34,15 +21,16 @@ public class WeatherViewModel {
     var forecast = Box([WeatherTableViewCellViewModel]())
     
     func changeLocation(to newLocation: String) {
-      locationName.value = "Loading..."
-      geocoder.geocode(addressString: newLocation) { [weak self] locations in
-        guard let self = self else { return }
-        if let location = locations.first {
-          self.locationName.value = location.name
-          self.fetchWeatherForLocation(location)
-          return
+        locationName.value = "Loading..."
+        geocoder.geocode(addressString: newLocation) { [weak self] locations in
+            guard let self = self else { return }
+            if let location = locations.first {
+                self.locationName.value = location.name
+                self.fetchWeatherForLocation(location)
+                self.fetchWeekWeatherForLocation(location)
+                return
+            }
         }
-      }
     }
     
     func changeLocation(to newLocation: CLLocation) {
@@ -66,14 +54,16 @@ public class WeatherViewModel {
             else {
                 return
             }
-            
             DispatchQueue.main.async {
                 self?.currentTemperature.value = "\(Int(weatherData.main.temp))°"
                 self?.minimunTemperature.value = "\(Int(weatherData.main.tempMin))°"
                 self?.maximumTemperature.value = "\(Int(weatherData.main.tempMax))°"
                 self?.weatherDescription.value = "\(weatherData.weather[0].main)"
+                self?.largeImg.value = self?.updateImg(weatherData.weather[0].main)
+                self?.backgroundColor.value = self?.updateColor(weatherData.weather[0].main) ?? UIColor.clear
             }
         }
+        
     }
     
     private func fetchWeekWeatherForLocation(_ location: Location) {
@@ -92,22 +82,49 @@ public class WeatherViewModel {
             self?.forecast.value = forecastList.map({ weather in
                 
                 WeatherTableViewCellViewModel(weekday: self?.getDay(Double(weather.dt)) ?? "",
-                                              icon: self?.getImage(weather.weather[0].main),
-                                              dayTemp: "\(Int(weather.main.temp))°")
+                                              icon: self?.updateIcon(weather.weather[0].main),
+                                              dayTemp: "\(Int(weather.main.temp))°",
+                                              bgColor: self?.updateColor(weather.weather[0].main) ?? UIColor.clear)
             })
         }
     }
     
-    private func getImage(_ name: String) -> UIImage? {
+    private func updateColor(_ name: String) -> UIColor {
         switch name {
-        case "clear":
-            return UIImage(named: "clear")
-        case "partlysunny", "Clouds":
-            return UIImage(named: "partlysunny")
+        case "Clear":
+            return UIColor.clear
+        case "partly sunny", "Clouds":
+            return UIColor.cloudy
         case "rain":
-            return UIImage(named: "rain")
+            return UIColor.rainy
+        default:
+            return UIColor.clear
+        }
+    }
+    
+    private func updateImg(_ name: String) -> UIImage? {
+        switch name {
+        case "Clear":
+            return UIImage.sunny
+        case "partly sunny", "Clouds":
+            return UIImage.cloudy
+        case "rain":
+            return UIImage.rainny
         default:
             return UIImage(named: "clear")
+        }
+    }
+    
+    private func updateIcon(_ name: String) -> UIImage? {
+        switch name {
+        case "clear":
+            return UIImage.clearIcon
+        case "clouds", "Clouds":
+            return UIImage.cloudIcon
+        case "rain":
+            return UIImage.rainIcon
+        default:
+            return UIImage.clearIcon
         }
     }
     
