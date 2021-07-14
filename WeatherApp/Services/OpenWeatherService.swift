@@ -18,9 +18,10 @@ class OpenWeatherService {
     typealias WeatherDataCompletion = (WeatherModel?, OpenWeatherMapError?) -> ()
     typealias WeatherForecastDataCompletion = (ForecastModel?, OpenWeatherMapError?) -> ()
     
-//    static func currentWeatherDataForLocation(latitude: Double, longitude: Double, completion: @escaping WeatherDataCompletion)  {}
-    
-    static func currentWeatherDataForLocation(latitude: Double, longitude: Double, session: URLSession = .shared, completion: @escaping WeatherDataCompletion) {
+    static func currentWeatherDataForLocation(latitude: Double,
+                                              longitude: Double,
+                                              session: URLSession = .shared,
+                                              completion: @escaping WeatherDataCompletion) {
         session.request(.fetchCurrentWeather(latitude: latitude, longitude: longitude)) { data, response, error in
             
             guard error == nil else {
@@ -47,21 +48,22 @@ class OpenWeatherService {
                 return
             }
             
-            
             do {
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
                 let weatherModel = try decoder.decode(WeatherModel.self, from: data)
                 completion(weatherModel, nil)
-                
             } catch {
                 print("Unable to decode Open Weather response: \(error.localizedDescription)")
                 completion(nil, .invalidData)
             }
         }
     }
-    
-    static func forecastWeatherDataForLocation(latitude: Double, longitude: Double, session: URLSession = .shared, completion: @escaping WeatherForecastDataCompletion) {
+
+    static func forecastWeatherDataForLocation(latitude: Double,
+                                               longitude: Double,
+                                               session: URLSession = .shared,
+                                               completion: @escaping WeatherForecastDataCompletion) {
         session.request(.fetchFiveDayWeather(latitude: latitude, longitude: longitude)) { data, response, error in
             
             guard error == nil else {
@@ -87,14 +89,12 @@ class OpenWeatherService {
                 completion(nil, .failedRequest)
                 return
             }
-            
-            
+
             do {
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
                 let forecastModel = try decoder.decode(ForecastModel.self, from: data)
                 completion(forecastModel, nil)
-                
             } catch {
                 print("Unable to decode Weather response: \(error.localizedDescription)")
                 completion(nil, .invalidData)

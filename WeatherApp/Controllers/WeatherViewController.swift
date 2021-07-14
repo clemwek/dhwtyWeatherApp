@@ -10,6 +10,8 @@ import CoreLocation
 
 class WeatherViewController: UIViewController {
     
+    @IBOutlet weak var largeImg: UIImageView!
+    @IBOutlet weak var tableBack: UIView!
     @IBOutlet weak var weatherTable: UITableView!
     @IBOutlet weak var minTempValue: UILabel!
     @IBOutlet weak var smallCurrentTemp: UILabel!
@@ -52,9 +54,27 @@ class WeatherViewController: UIViewController {
                 self?.weatherTable.reloadData()
             }
         }
+        viewModel.largeImg.bind { [weak self] largeImg in
+            self?.largeImg.image = largeImg
+        }
+        viewModel.backgroundColor.bind { [weak self] bgColor in
+            DispatchQueue.main.async {
+                self?.tableBack.backgroundColor = bgColor
+                self?.weatherTable.backgroundColor = bgColor
+            }
+        }
         
         locationManager.requestWhenInUseAuthorization()
         var currentLoc: CLLocation!
+        
+//        switch locationManager.authorizationStatus {
+//        case .restricted, .denied:
+//            print("requires permmision")
+//        default:
+//            currentLoc = locationManager.location
+//            viewModel.changeLocation(to: currentLoc)
+//        }
+        
         if(CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
             CLLocationManager.authorizationStatus() == .authorizedAlways) {
             currentLoc = locationManager.location

@@ -124,7 +124,7 @@
                                         </prototypes>
                                     </tableView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <color key="backgroundColor" red="0.38789713380000002" green="0.66052305700000002" blue="0.26354894039999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="R8c-ww-1Jp" firstAttribute="leading" secondItem="bdj-eD-iaL" secondAttribute="leading" id="0GH-Ap-SlA"/>
                                     <constraint firstAttribute="trailing" secondItem="uWO-i7-HyR" secondAttribute="trailing" constant="10" id="2S8-s6-QfP"/>
@@ -193,9 +193,11 @@
                         <outlet property="cityLable" destination="AGZ-Tl-DjH" id="RWP-cg-kKh"/>
                         <outlet property="daysWeather" destination="dIn-je-zV8" id="cFj-cO-knh"/>
                         <outlet property="largeCurrentTemp" destination="zZb-N0-tUw" id="SAc-qu-NtC"/>
+                        <outlet property="largeImg" destination="UVh-X1-nXe" id="J14-h3-Qb3"/>
                         <outlet property="maxTemp" destination="ShP-sC-2gv" id="SSC-hF-gEu"/>
                         <outlet property="minTempValue" destination="m6d-7M-nlE" id="gJX-WE-pFL"/>
                         <outlet property="smallCurrentTemp" destination="Zj6-rA-0Fr" id="m0P-gk-AVl"/>
+                        <outlet property="tableBack" destination="bdj-eD-iaL" id="uiF-xC-ta7"/>
                         <outlet property="weatherTable" destination="LWQ-gF-FOT" id="j6k-41-1ms"/>
                     </connections>
                 </viewController>

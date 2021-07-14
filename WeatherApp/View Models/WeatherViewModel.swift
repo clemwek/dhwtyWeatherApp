@@ -29,6 +29,8 @@ public class WeatherViewModel {
     let minimunTemperature = Box("...")
     let maximumTemperature = Box("...")
     let weatherDescription = Box("...")
+    let largeImg: Box<UIImage?> = Box(UIImage.sunny)
+    let backgroundColor: Box<UIColor> = Box(.sunny)
     var forecast = Box([WeatherTableViewCellViewModel]())
     
     func changeLocation(to newLocation: String) {
@@ -64,10 +66,11 @@ public class WeatherViewModel {
             else {
                 return
             }
+            
             DispatchQueue.main.async {
-                self?.currentTemperature.value = "\(Int(weatherData.main.temp))"
-                self?.minimunTemperature.value = "\(Int(weatherData.main.tempMin))"
-                self?.maximumTemperature.value = "\(Int(weatherData.main.tempMax))"
+                self?.currentTemperature.value = "\(Int(weatherData.main.temp))°"
+                self?.minimunTemperature.value = "\(Int(weatherData.main.tempMin))°"
+                self?.maximumTemperature.value = "\(Int(weatherData.main.tempMax))°"
                 self?.weatherDescription.value = "\(weatherData.weather[0].main)"
             }
         }
@@ -90,7 +93,7 @@ public class WeatherViewModel {
                 
                 WeatherTableViewCellViewModel(weekday: self?.getDay(Double(weather.dt)) ?? "",
                                               icon: self?.getImage(weather.weather[0].main),
-                                              dayTemp: "\(Int(weather.main.temp))")
+                                              dayTemp: "\(Int(weather.main.temp))°")
             })
         }
     }
@@ -99,7 +102,7 @@ public class WeatherViewModel {
         switch name {
         case "clear":
             return UIImage(named: "clear")
-        case "partlysunny":
+        case "partlysunny", "Clouds":
             return UIImage(named: "partlysunny")
         case "rain":
             return UIImage(named: "rain")

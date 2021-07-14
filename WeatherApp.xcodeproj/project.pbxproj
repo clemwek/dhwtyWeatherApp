@@ -27,6 +27,8 @@
 		B3D784C1269C34550031EE4A /* OpenWeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D784C0269C34550031EE4A /* OpenWeatherService.swift */; };
 		B3D784C4269D6EE20031EE4A /* WeatherTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D784C3269D6EE20031EE4A /* WeatherTableViewCellViewModel.swift */; };
 		B3D784C6269DA6F00031EE4A /* extentio+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D784C5269DA6F00031EE4A /* extentio+Date.swift */; };
+		B3D784C8269EC0C10031EE4A /* extension+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D784C7269EC0C10031EE4A /* extension+UIColor.swift */; };
+		B3D784CA269ECCF60031EE4A /* extention+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D784C9269ECCF60031EE4A /* extention+UIImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,8 @@
 		B3D784C0269C34550031EE4A /* OpenWeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherService.swift; sourceTree = "<group>"; };
 		B3D784C3269D6EE20031EE4A /* WeatherTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		B3D784C5269DA6F00031EE4A /* extentio+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extentio+Date.swift"; sourceTree = "<group>"; };
+		B3D784C7269EC0C10031EE4A /* extension+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extension+UIColor.swift"; sourceTree = "<group>"; };
+		B3D784C9269ECCF60031EE4A /* extention+UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extention+UIImage.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +214,8 @@
 			children = (
 				B38C5CEE2697651A00F9F5F2 /* extension+URLSession.swift */,
 				B3D784C5269DA6F00031EE4A /* extentio+Date.swift */,
+				B3D784C7269EC0C10031EE4A /* extension+UIColor.swift */,
+				B3D784C9269ECCF60031EE4A /* extention+UIImage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -351,9 +357,11 @@
 				B34B10FD269339D10014A333 /* WeatherViewController.swift in Sources */,
 				B3D784C1269C34550031EE4A /* OpenWeatherService.swift in Sources */,
 				B3D784BF269C2FC20031EE4A /* Location.swift in Sources */,
+				B3D784C8269EC0C10031EE4A /* extension+UIColor.swift in Sources */,
 				B34B10F9269339D10014A333 /* AppDelegate.swift in Sources */,
 				B34B10FB269339D10014A333 /* SceneDelegate.swift in Sources */,
 				B3D784C4269D6EE20031EE4A /* WeatherTableViewCellViewModel.swift in Sources */,
+				B3D784CA269ECCF60031EE4A /* extention+UIImage.swift in Sources */,
 				B3D784C6269DA6F00031EE4A /* extentio+Date.swift in Sources */,
 				B3D784BD269C2F180031EE4A /* LocationManager.swift in Sources */,
 				B39FF4AF2696E0980090C06B /* WeatherModel.swift in Sources */,
@@ -539,7 +547,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = Z2TAY6TRFW;
 				INFOPLIST_FILE = WeatherApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -563,7 +571,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = Z2TAY6TRFW;
 				INFOPLIST_FILE = WeatherApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
