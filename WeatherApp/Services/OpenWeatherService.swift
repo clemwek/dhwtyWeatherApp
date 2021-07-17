@@ -22,7 +22,8 @@ class OpenWeatherService {
                                               longitude: Double,
                                               session: URLSession = .shared,
                                               completion: @escaping WeatherDataCompletion) {
-        session.request(.fetchCurrentWeather(latitude: latitude, longitude: longitude)) { data, response, error in
+        session.request(.fetchCurrentWeather(latitude: latitude,
+                                             longitude: longitude)) { data, response, error in
             
             guard error == nil else {
                 print("Failed request from Open Weather: \(error!.localizedDescription)")
@@ -64,7 +65,8 @@ class OpenWeatherService {
                                                longitude: Double,
                                                session: URLSession = .shared,
                                                completion: @escaping WeatherForecastDataCompletion) {
-        session.request(.fetchFiveDayWeather(latitude: latitude, longitude: longitude)) { data, response, error in
+        session.request(.fetchFiveDayWeather(latitude: latitude,
+                                             longitude: longitude)) { data, response, error in
             
             guard error == nil else {
                 print("Failed request from open Weather: \(error!.localizedDescription)")

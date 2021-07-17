@@ -30,7 +30,8 @@ extension Endpoint {
 }
 
 extension Endpoint {
-    static func fetchCurrentWeather(latitude: Double, longitude: Double) -> Self {
+    static func fetchCurrentWeather(latitude: Double,
+                                    longitude: Double) -> Self {
         let apiKey = "c611c520417312134410fbe9eee3ea3e"
         return Endpoint(
             path: "weather",
@@ -42,7 +43,8 @@ extension Endpoint {
             ])
     }
 
-    static func fetchFiveDayWeather(latitude: Double, longitude: Double) -> Self {
+    static func fetchFiveDayWeather(latitude: Double,
+                                    longitude: Double) -> Self {
         let apiKey = "c611c520417312134410fbe9eee3ea3e"
         return Endpoint(
             path: "forecast",

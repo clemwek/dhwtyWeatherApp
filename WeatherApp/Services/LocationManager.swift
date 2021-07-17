@@ -11,8 +11,8 @@ import CoreLocation
 class LocationManager {
     private lazy var geocoder = CLGeocoder()
     
-    ///Convert a place name to a location
-    func geocode(addressString: String, callback: @escaping ([Location]) -> ()) {
+    func geocode(addressString: String,
+                 callback: @escaping ([Location]) -> ()) {
         geocoder.geocodeAddressString(addressString) { (placemarks, error) in
             var locations: [Location] = []
             if let error = error {
@@ -39,7 +39,8 @@ class LocationManager {
         }
     }
     
-    func geocode(location: CLLocation, callback: @escaping ([Location])
+    func geocode(location: CLLocation,
+                 callback: @escaping ([Location])
                     -> Void ) {
         let geocoder = CLGeocoder()
         

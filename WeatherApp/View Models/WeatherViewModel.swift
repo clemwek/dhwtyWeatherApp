@@ -47,7 +47,8 @@ public class WeatherViewModel {
     }
     
     private func fetchWeatherForLocation(_ location: Location) {
-        OpenWeatherService.currentWeatherDataForLocation(latitude: location.latitude, longitude: location.longitude) { [weak self] (weatherData, error) in
+        OpenWeatherService.currentWeatherDataForLocation(latitude: location.latitude,
+                                                         longitude: location.longitude) { [weak self] (weatherData, error) in
             guard
                 let _ = self,
                 let weatherData = weatherData
@@ -67,7 +68,8 @@ public class WeatherViewModel {
     }
     
     private func fetchWeekWeatherForLocation(_ location: Location) {
-        OpenWeatherService.forecastWeatherDataForLocation(latitude: location.latitude, longitude: location.longitude) { [weak self] (farecastData, error) in
+        OpenWeatherService.forecastWeatherDataForLocation(latitude: location.latitude,
+                                                          longitude: location.longitude) { [weak self] (farecastData, error) in
             guard
                 let _ = self,
                 let farecastData = farecastData

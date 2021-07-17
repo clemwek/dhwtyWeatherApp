@@ -13,7 +13,10 @@ public class WeatherTableViewCellViewModel {
     let dayTemp: String
     let bgColor: UIColor
     
-    init(weekday: String, icon: UIImage?, dayTemp: String, bgColor: UIColor) {
+    init(weekday: String,
+         icon: UIImage?,
+         dayTemp: String,
+         bgColor: UIColor) {
         self.weekday = weekday
         self.dayTemp = dayTemp
         self.icon = icon
